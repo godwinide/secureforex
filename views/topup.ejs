@@ -1,0 +1,207 @@
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper ">
+
+  
+    <!-- top tiles -->
+    <div class="container-fluid" style="background: #04396D;">
+      <div class="row tile_count">
+        <div class="col-md-2 col-sm-4 col-6 tile_stats_count p-2">
+        <div class="card p-3 bg-navy">
+          <span class="count_top"><i class="fa fa-money"></i> Balance</span>
+          <div class="count" style=""><%=req.user.currency%> <%= req.user.balance.toFixed(2) %></div>
+          <span class="count_bottom"><i class="text-success">Available </i> Balance</span>
+          </div>
+        </div>
+        <div class="col-md-2 col-sm-4 col-6 tile_stats_count p-2">
+         <div class="card p-3 bg-secondary">
+          <span class="count_top"><i class="fa fa-clock-o"></i> Invested</span>
+          <div class="count" style=""><%=req.user.currency%> <%= req.user.invested.toFixed(2) %></div>
+          <span class="count_bottom"><i class="text-warning"><i class="fa fa-sort-asc"></i>Trade</i> Ongoing</span>
+          </div>
+        </div>
+        <div class="col-md-2 col-sm-4 col-6 tile_stats_count p-2">
+         <div class="card p-3 bg-navy">
+          <span class="count_top"><i class="fa fa-shield"></i> Account Type</span>
+          <div class="count text-success bolder" style="font-weight: bolder;"> <%= req.user.account_type %> </div>
+          <span class="count_bottom"><i class="text-success"><i class="fa fa-sort-asc"></i>Trade </i> Account Type</span>
+          </div>
+        </div>
+                    <div class="col-md-2 col-sm-4 col-6 tile_stats_count p-2">
+         <div class="card p-3 bg-navy">
+          <span class="count_top"><i class="fa fa-arrow-down"></i> Total Withdrawals</span>
+          <div class="count" style=""><%=req.user.currency%> <%= req.user.total_withdraw.toFixed(2) %></div>
+          <span class="count_bottom"><i class="text-success"><i class="fa fa-sort-asc"></i>Withdrawals </i> </span>
+          </div>
+        </div>
+        <div class="col-md-2 col-sm-4 col-6 tile_stats_count p-2" style="border-right: 0;">
+         <div class="card p-3 bg-dark">
+          <span class="count_top"><i class="fa fa-credit-card"></i> Total Profit</span>
+          <div class="count" style=""><%=req.user.currency%> <%= req.user.total_profit.toFixed(2) %></div>
+          <span class="count_bottom"><i class="text-success"><i class="fa fa-sort-asc"></i>32% </i> From last Week</span>
+          </div>
+        </div>
+      </div>
+      </div>
+           <!-- /top tiles -->
+ 
+              <div class="container-fluid" >
+ 
+      <div style="position: fixed; margin-left: 20px; background: #fff; border-radius: 15px; padding: 10px;  bottom: 10%; z-index: 1000;"><a href="https://api.whatsapp.com/send/?phone=12144821285‬&amp;text&amp;app_absent=0"><i class="fa fa-whatsapp text-success whatsapp"></i></a></div>
+                <div style="position: fixed; right: 0; bottom: 10%; font-size: 30px; z-index: 1000;"></div>
+ <section >
+     
+         <div class="container">
+     <section wire:id="zkAPbWLaYzyyuOwZ1T0X" wire:initial-data="{&quot;fingerprint&quot;:{&quot;id&quot;:&quot;zkAPbWLaYzyyuOwZ1T0X&quot;,&quot;name&quot;:&quot;topupwire&quot;,&quot;locale&quot;:&quot;en&quot;},&quot;effects&quot;:{&quot;listeners&quot;:[]},&quot;serverMemo&quot;:{&quot;children&quot;:[],&quot;errors&quot;:[],&quot;htmlHash&quot;:&quot;6c5a74d6&quot;,&quot;data&quot;:{&quot;amount&quot;:null,&quot;photo&quot;:null,&quot;addressMode&quot;:false,&quot;otherAddressMode&quot;:false,&quot;method&quot;:null,&quot;uploadMode&quot;:false},&quot;dataMeta&quot;:[],&quot;checksum&quot;:&quot;8e14bb8eada32db0e33634620c8c563fea57edf2589dfe66678d06d3e041d381&quot;}}">
+   
+   <div class="container-fluid ">
+ 
+     <div class="col-12 p-2 d-flex justify-content-between align-items-center p_header">
+ 
+       <h5><img src="/image/fund.png" width="60" height="50" ><b class="text-success"> Credit Wallet</b>
+       </h5>
+       <div>
+ 
+ 
+ 
+                 <a href="/confirm-topup" class="btn btn-info btn-sm roundButton" wire:click="uploadPop" >Upload POP</a>
+         
+ 
+ 
+       </div>
+ 
+     </div>
+ 
+ 
+     <div class="col-12" >
+           </div>
+     <div class="col-12" >
+           </div>
+ 
+     <div class="col-12" >
+           </div>
+ 
+     <div class="text-center col-lg-12 offset-lg-0 p-4"> 
+      <!-- <div class="card text-center p-lg-3">
+         <img src="/image/bitcoin.jpg"   class="img-responsive w-100">
+         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong" style="padding: 10px; border-radius: 10px;">
+ CHOOSE THIS
+ </button>
+ </div>-->
+ 
+ 
+ <div class="  p-3">
+  <div class="col-12 mb-3  text-left"><b class="text-success">1. Instruction</b> 
+    <p>Choose your prefered payment option from list of available deposit method</p>
+    <p>With the your selected choice copy and credit the account with any amount you wish to deposit.  </p>
+    <p>Click on Upload Pop at the top right corner of this page and upload your proof of payment by selecting the method used.</p>
+    <p class="text-success"><b>2. List of Available payment Options</b></p></div>
+ 
+ 
+    <div class="row">
+         <div class="col-lg-4 p-2 ">
+      <div class="bg-white p-4" >
+       
+       <div class="col-12"> 
+        <img src="https://thefinanser.com/wp-content/uploads/2021/09/bank.jpeg" width="70" height="70" > </div>
+        
+        <p>Bank Transfer</p>
+ 
+        <button type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="#exampleModalLong8" style=" border-radius: 10px;">
+         Pay With
+       </button>
+     </div>
+ 
+ 
+ 
+     
+   <!-- Modal -->
+   <div class="modal fade" id="exampleModalLong8" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+     <div class="modal-dialog" role="document">
+       <div class="modal-content">
+ 
+         <div class="modal-header">
+           <h5 class="modal-title text-success" id="exampleModalLongTitle" ><b>Credit Wallet</b></h5>
+           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+             <span aria-hidden="true">&times;</span>
+           </button>
+         </div>
+ 
+         <div class="modal-body">
+           <p>Make Payment to the account below </p>
+
+            <p>Reference: BX513EQXE </p>
+            <p>Recipient name: Luno </p>
+            <p>Bank name: standard bank </p>
+            <p>Account number: 051410583 </p>
+     </div>
+ 
+     <div class="modal-footer">
+       <button type="button" class="btn btn-dark btn-block bg-lg" data-dismiss="modal" style="padding: 10px;">Exit</button>
+ 
+     </div>
+ 
+   </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ 
+ 
+     </div>
+ 
+ 
+   </div>
+ </section>
+ 
+ <!-- Livewire Scripts -->
+ 
+ <script src="/vendor/livewire/livewire.js?id=936e5d0fb0b76b631ba7" data-turbo-eval="false" data-turbolinks-eval="false"></script>
+ <script data-turbo-eval="false" data-turbolinks-eval="false">
+     if (window.livewire) {
+         console.warn('Livewire: It looks like Livewire\'s @livewireScripts JavaScript assets have already been loaded. Make sure you aren\'t loading them twice.')
+     }
+ 
+     window.livewire = new Livewire();
+     window.livewire.devTools(true);
+     window.Livewire = window.livewire;
+     window.livewire_app_url = '';
+     window.livewire_token = 'PUaUKss4Fqdn0MGJyI8Hz63PnPqZuDULZHHDJh3m';
+ 
+     /* Make sure Livewire loads first. */
+     if (window.Alpine) {
+         /* Defer showing the warning so it doesn't get buried under downstream errors. */
+         document.addEventListener("DOMContentLoaded", function () {
+             setTimeout(function() {
+                 console.warn("Livewire: It looks like AlpineJS has already been loaded. Make sure Livewire\'s scripts are loaded before Alpine.\n\n Reference docs for more info: http://laravel-livewire.com/docs/alpine-js")
+             })
+         });
+     }
+ 
+     /* Make Alpine wait until Livewire is finished rendering to do its thing. */
+     window.deferLoadingAlpine = function (callback) {
+         window.addEventListener('livewire:load', function () {
+             callback();
+         });
+     };
+ 
+     document.addEventListener("DOMContentLoaded", function () {
+         window.livewire.start();
+     });
+ </script>
+             
+         </div>
+ </section>
+ 
+ 
+ 
+ 
+ 
+ 
+          
+ </div>
+ 
+   </div>
+   <!-- /.content-wrapper -->
+ 

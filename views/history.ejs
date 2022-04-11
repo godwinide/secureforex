@@ -1,0 +1,137 @@
+<div class="content-wrapper ">
+
+  
+  <!-- top tiles -->
+  <div class="container-fluid" style="background: #04396D;">
+   <div class="row tile_count">
+     <div class="col-md-2 col-sm-4 col-6 tile_stats_count p-2">
+     <div class="card p-3 bg-navy">
+       <span class="count_top"><i class="fa fa-money"></i> Balance</span>
+       <div class="count" style=""><%=req.user.currency%> <%= req.user.balance.toFixed(2) %></div>
+       <span class="count_bottom"><i class="text-success">Available </i> Balance</span>
+       </div>
+     </div>
+     <div class="col-md-2 col-sm-4 col-6 tile_stats_count p-2">
+      <div class="card p-3 bg-secondary">
+       <span class="count_top"><i class="fa fa-clock-o"></i> Invested</span>
+       <div class="count" style=""><%=req.user.currency%> <%= req.user.invested.toFixed(2) %></div>
+       <span class="count_bottom"><i class="text-warning"><i class="fa fa-sort-asc"></i>Trade</i> Ongoing</span>
+       </div>
+     </div>
+     <div class="col-md-2 col-sm-4 col-6 tile_stats_count p-2">
+      <div class="card p-3 bg-navy">
+       <span class="count_top"><i class="fa fa-shield"></i> Account Type</span>
+       <div class="count text-success bolder" style="font-weight: bolder;"> <%= req.user.account_type %> </div>
+       <span class="count_bottom"><i class="text-success"><i class="fa fa-sort-asc"></i>Trade </i> Account Type</span>
+       </div>
+     </div>
+                 <div class="col-md-2 col-sm-4 col-6 tile_stats_count p-2">
+      <div class="card p-3 bg-navy">
+       <span class="count_top"><i class="fa fa-arrow-down"></i> Total Withdrawals</span>
+       <div class="count" style=""><%=req.user.currency%> <%= req.user.total_withdraw.toFixed(2) %></div>
+       <span class="count_bottom"><i class="text-success"><i class="fa fa-sort-asc"></i>Withdrawals </i> </span>
+       </div>
+     </div>
+     <div class="col-md-2 col-sm-4 col-6 tile_stats_count p-2" style="border-right: 0;">
+      <div class="card p-3 bg-dark">
+       <span class="count_top"><i class="fa fa-credit-card"></i> Total Profit</span>
+       <div class="count" style=""><%=req.user.currency%> <%= req.user.total_profit.toFixed(2) %></div>
+       <span class="count_bottom"><i class="text-success"><i class="fa fa-sort-asc"></i>32% </i> From last Week</span>
+       </div>
+     </div>
+   </div>
+   </div>
+
+         <!-- /top tiles -->
+
+            <div class="container-fluid" >
+
+    <div style="position: fixed; margin-left: 20px; background: #fff; border-radius: 15px; padding: 10px;  bottom: 10%; z-index: 1000;"><a href="https://api.whatsapp.com/send/?phone=12144821285‬&amp;text&amp;app_absent=0"><i class="fa fa-whatsapp text-success whatsapp"></i></a></div>
+              <div style="position: fixed; right: 0; bottom: 10%; font-size: 30px; z-index: 1000;"></div>
+
+<section>
+ 
+<div class="container-fluid  p-4">
+
+
+
+
+ <div class="col-12 p-2 d-flex justify-content-between align-items-center p_header">
+
+     <h5><img src="/image/fund.png" width="60" height="50" ><b class="text-success"> Manage Deposit</b>
+     </h5>
+     <div>
+
+
+
+    
+       <a href="/fund-account" class="btn btn-info btn-sm roundButton"  >Top Up</a>
+      
+
+
+
+     </div>
+
+   </div>
+
+
+<div class="col-12" >
+       </div>
+       <div class="col-12" >
+       </div>
+
+       <div class="col-12" >
+       </div>
+  
+       <div class="table-responsive mt-3">
+
+
+
+<table class="table table-striped">
+
+   <thead class="bg-dark">
+   <th>S/N</th>
+
+   
+   
+   
+   <th>Method</th>
+   <th>Amount</th>
+   <th>Status</th>
+   <th>Date </th>
+ 
+ </thead>
+ <tbody>
+
+   <% history.reverse().map((h, i) => {%>
+     <tr>
+       <td>
+           <i class="fa fa-circle text-warning"></i> 
+       <%=i+1%></td>
+     
+     
+       <td>BITCOIN </td>
+       <td><%= h.amount%></td>
+       <td><%= h.status%> </td>
+       <td><%= new Date(h.date).toDateString() %></td>
+       </tr>
+   <%})%>
+   
+ 
+
+     </tbody>
+</table>
+<div class="text-right">
+ 
+</div>
+</div>
+
+</div>
+
+</section>
+
+
+        
+</div>
+
+ </div>

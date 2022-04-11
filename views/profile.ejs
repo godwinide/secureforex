@@ -1,0 +1,178 @@
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper ">
+
+  
+    <!-- top tiles -->
+    <div class="container-fluid" style="background: #04396D;">
+        <div class="row tile_count">
+          <div class="col-md-2 col-sm-4 col-6 tile_stats_count p-2">
+          <div class="card p-3 bg-navy">
+            <span class="count_top"><i class="fa fa-money"></i> Balance</span>
+            <div class="count" style=""><%=req.user.currency%> <%= req.user.balance.toFixed(2) %></div>
+            <span class="count_bottom"><i class="text-success">Available </i> Balance</span>
+            </div>
+          </div>
+          <div class="col-md-2 col-sm-4 col-6 tile_stats_count p-2">
+           <div class="card p-3 bg-secondary">
+            <span class="count_top"><i class="fa fa-clock-o"></i> Invested</span>
+            <div class="count" style=""><%=req.user.currency%> <%= req.user.invested.toFixed(2) %></div>
+            <span class="count_bottom"><i class="text-warning"><i class="fa fa-sort-asc"></i>Trade</i> Ongoing</span>
+            </div>
+          </div>
+          <div class="col-md-2 col-sm-4 col-6 tile_stats_count p-2">
+           <div class="card p-3 bg-navy">
+            <span class="count_top"><i class="fa fa-shield"></i> Account Type</span>
+            <div class="count text-success bolder" style="font-weight: bolder;"> <%= req.user.account_type %> </div>
+            <span class="count_bottom"><i class="text-success"><i class="fa fa-sort-asc"></i>Trade </i> Account Type</span>
+            </div>
+          </div>
+                      <div class="col-md-2 col-sm-4 col-6 tile_stats_count p-2">
+           <div class="card p-3 bg-navy">
+            <span class="count_top"><i class="fa fa-arrow-down"></i> Total Withdrawals</span>
+            <div class="count" style=""><%=req.user.currency%> <%= req.user.total_withdraw.toFixed(2) %></div>
+            <span class="count_bottom"><i class="text-success"><i class="fa fa-sort-asc"></i>Withdrawals </i> </span>
+            </div>
+          </div>
+          <div class="col-md-2 col-sm-4 col-6 tile_stats_count p-2" style="border-right: 0;">
+           <div class="card p-3 bg-dark">
+            <span class="count_top"><i class="fa fa-credit-card"></i> Total Profit</span>
+            <div class="count" style=""><%=req.user.currency%> <%= req.user.total_profit.toFixed(2) %></div>
+            <span class="count_bottom"><i class="text-success"><i class="fa fa-sort-asc"></i>32% </i> From last Week</span>
+            </div>
+          </div>
+        </div>
+        </div>
+ 
+           <!-- /top tiles -->
+ 
+              <div class="container-fluid" >
+ 
+      <div style="position: fixed; margin-left: 20px; background: #fff; border-radius: 15px; padding: 10px;  bottom: 10%; z-index: 1000;"><a href="https://api.whatsapp.com/send/?phone=12144821285‬&amp;text&amp;app_absent=0"><i class="fa fa-whatsapp text-success whatsapp"></i></a></div>
+                <div style="position: fixed; right: 0; bottom: 10%; font-size: 30px; z-index: 1000;"></div>
+ 
+     
+       
+      <div wire:id="6l6MoEYL9WEHfDdK0oWC" wire:initial-data="{&quot;fingerprint&quot;:{&quot;id&quot;:&quot;6l6MoEYL9WEHfDdK0oWC&quot;,&quot;name&quot;:&quot;account&quot;,&quot;locale&quot;:&quot;en&quot;},&quot;effects&quot;:{&quot;listeners&quot;:[]},&quot;serverMemo&quot;:{&quot;children&quot;:[],&quot;errors&quot;:[],&quot;htmlHash&quot;:&quot;104da555&quot;,&quot;data&quot;:[],&quot;dataMeta&quot;:[],&quot;checksum&quot;:&quot;4ebbaedc75eb3d2cd529ea2ed5024888f6915f98d8a9333d3d008f1781f791ae&quot;}}">
+  <div class="col-12 p-2 d-flex justify-content-between align-items-center p_header">
+ 
+       <h5><img src="https://images.vexels.com/media/users/3/147102/isolated/lists/082213cb0f9eabb7e6715f59ef7d322a-instagram-profile-icon.png" width="60" height="50" ><b class="text-success"> Profile</b>
+       </h5>
+       <div>
+      
+         <!-- <a href="/update-profile" class="btn btn-info btn-sm roundButton"  >Edit Profile</a> -->
+       
+       </div>
+ 
+     </div>
+  
+   <div class="container-fluid  mt-3 mb-3">
+  
+       <div class="row small">
+           <div class="col-lg-4">
+               <div class=" p-2 bg-white">
+            <img src="https://cdn-icons-png.flaticon.com/512/219/219986.png" width="100%">
+        </div>
+           </div>
+           <div class="col-lg-8   ">
+               <div class="bg-white p-2">
+         <h3 class="text-success"><b>Godwin Nicholas</b></h3>
+         <div class="d-flex justify-content-between">
+           <p  class="text-secondary"><i class="fa fa-user"></i> Account ID:</p>
+           <p class="bg-primary text-secondary small p-1 " style="height: 20px;">X<%= String(req.user.id).slice(3,11) %></p>
+ 
+         </div>
+ 
+         <div class="d-flex justify-content-between">
+           <p  class="text-secondary"><i class="fa fa-envelope"></i> Email:</p>
+           <p class="bg-primary text-secondary  small p-1"  style="height: 20px;"><%= req.user.email %></p>
+ 
+         </div>
+         <div class="d-flex justify-content-between">
+           <p class="text-secondary"><i class="fas fa-map-marker-alt"></i> Country:</p>
+           <p   class="bg-dark text-secondary small p-1"  style="height: 20px;"><%= req.user.country %></p>
+ 
+         </div>
+         <div class="d-flex justify-content-between">
+           <p  class="text-secondary"><i class="fa fa-phone"></i> Phone:</p>
+           <p class="bg-warning text-secondary small p-1"  style="height: 20px;"><%= req.user.phone %></p>
+ 
+         </div>
+         <div class="d-flex justify-content-between">
+           <p  class="text-secondary"><i class="fa fa-money"></i> Trade Currency:</p>
+           <p class="bg-info text-secondary small p-1"><%= req.user.currency %> </p>
+ 
+         </div>
+ 
+         <div class="d-flex justify-content-between">
+           <p  class="text-secondary"><i class="fa fa-money"></i> Current Balance:</p>
+           <p class="bg-info text-secondary small p-1"  style="height: 20px;"><%= req.user.currency %> <%= req.user.balance %></p>
+ 
+         </div>
+ 
+         <div class="d-flex justify-content-between">
+           <p  class="text-secondary"><i class="fa fa-check"></i>Trade Status:</p>
+           <p class="bg-success text-secondary small p-1"  style="height: 20px;"><%= req.user.account_type %></p>
+ 
+         </div>
+                
+       </div>	
+           </div>
+       </div>
+     </div>
+   </div>
+ </div>
+    <script
+   src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+   integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs="
+   crossorigin="anonymous"></script>
+ <script type="text/javascript">
+     $(document).ready(function(){
+ $('.firstBtn').click(function()
+ {
+ $('.firstCard').toggle();
+ $('.secondCard').hide();
+     $('.thirdCard').hide();
+     $('.fourthCard').hide();
+ });
+ 
+ $('.secondBtn').click(function()
+ {
+     $('.firstCard').hide();
+ $('.secondCard').toggle();
+     $('.thirdCard').hide();
+     $('.fourthCard').hide();
+ });
+ 
+ $('.thirdBtn').click(function()
+ {
+     $('.firstCard').hide();
+     $('.secondCard').hide();
+     
+ $('.thirdCard').toggle();
+ $('.fourthCard').hide();
+ 
+ });
+ 
+ $('.fourthBtn').click(function()
+ {
+     $('.firstCard').hide();
+     $('.secondCard').hide();
+     $('.thirdCard').hide();
+ $('.fourthCard').toggle();
+ });
+     });
+ </script>            
+      
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+          
+ </div>
+ 
+   </div>
+   <!-- /.content-wrapper -->

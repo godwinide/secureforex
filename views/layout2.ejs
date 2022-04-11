@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <!-- CSRF Token -->
+  <meta name="csrf-token" content="xZ8sHpwBLscRbA3A9GyYPlP0c9mXXFkl3Wnp2Chi">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Securecryptotradingfx | Dashboard</title>
+
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome -->
+  <!-- <link rel="stylesheet" href="/admins/plugins/fontawesome-free/css/all.min.css"> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Tempusdominus Bootstrap 4 -->
+  <link rel="stylesheet" href="/admins/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+  <!-- iCheck -->
+  <link rel="stylesheet" href="/admins/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+  <!-- JQVMap -->
+  <link rel="stylesheet" href="/admins/plugins/jqvmap/jqvmap.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="/admins/dist/css/adminlte.min.css">
+  <!-- overlayScrollbars -->
+  <link rel="stylesheet" href="/admins/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+  <!-- Daterange picker -->
+  <link rel="stylesheet" href="/admins/plugins/daterangepicker/daterangepicker.css">
+  <!-- summernote -->
+  <link rel="stylesheet" href="/admins/plugins/summernote/summernote-bs4.min.css">
+
+   <link rel="stylesheet" href="/admins/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+  <link rel="stylesheet" href="/admins/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+  <link rel="stylesheet" href="/admins/plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+
+
+
+   <link rel="shortcut icon" type="image/x-icon" href="/storage/photos/0.32651600 1644096771467FB542-CA20-48DB-9024-AE750788CBB5.jpeg" />
+  
+  <style type="text/css">
+    .card h5 span{
+      font-size: 15px; font-weight: bold; font-style: italic; letter-spacing: 1px;
+    }
+  </style>
+  <style type="text/css">
+
+
+           .whatsapp{
+  font-size: 52px;
+}
+    @media (max-width: 1025px)
+    {         .whatsapp{
+  font-size: 32px;
+}
+}
+ .icon{font-size:32px;}
+.active_dashboard_menu{background:#000080; color:#000;}
+.active_user_sub_menu{color:red;}
+
+.upgrade{
+  width: 100vw;
+  height: 100vh;
+  opacity: .7;
+  z-index: 1;
+  background: #000;
+}
+
+
+  .roundInput
+{
+  border-radius: 20px!important;
+border: #4caf50 1px solid!important;
+}
+.roundButton
+{
+    border-radius: 20px!important;
+}
+.p_header
+{
+  border-bottom: 1px solid#fff;
+}
+
+  #acc_btn
+  {
+    background:0;
+    border: 0px solid #fff;
+    color: gold;
+    
+    padding: 2px;
+
+  }
+
+   #sidebar,#main_header,.main-footer{
+      background: #fff!important;
+      opacity: 0.99!important;
+     
+    }
+
+     #sidebar{
+
+       border-right: 5px solid 005B96!important;
+
+         border-top: 5px solid 005B96!important;
+            border-left: 5px solid 005B96!important;
+     }
+ #main_header{
+      background: #011F4B!important;
+      opacity: 0.99!important;
+     
+    }
+
+
+    #main_header{
+      margin-top: -24px!important;
+     
+    }
+    .nav-item .nav-icon,.nav-item .right
+    {
+      color:purple!important;
+    }
+     #sidebar .nav-item
+    {
+      min-height: 60px!important;
+      padding-top: 10px!important;
+      border-bottom: 1px #4caf50 solid!important;
+      
+        box-shadow:border-box!important;
+
+    }
+
+      #sidebar .nav-item a p
+    {
+        color: #4caf50!important;
+        font-size: 13px;
+        font-weight: bolder;
+       
+    }
+    #message_count
+    {
+      font-size: 32px;
+    }
+     #user_icon
+    {
+      font-size: 22px;
+    }
+    #user_badge
+    {
+      border-left: 0px solid #000041;
+      border-right: 0px solid #000041;
+    }
+
+
+     #message_counter
+    {
+      border-radius: 50%;
+      background:#4caf50!important;
+      padding: 8px;
+      color: #fff;
+      margin-top: -10px;
+    }
+    .brand-link
+    {
+      border-bottom: 0!important;
+    }
+     .main-footer
+    {
+      color: #000!important;
+    }
+    .sidebar{
+      height: 80vh!important;
+    }
+.content_wrapper{
+
+  background: rgb(255,255,255);
+background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 35%, rgba(227,8,174,1) 100%)!important;
+}
+
+    #sidebar .active
+    {
+      background:#000011!important;
+
+    }
+    @media (max-width: 1025px)
+    {
+  #notificationsIcon
+    {
+      padding: 20px;
+      padding-top: 30px;
+      padding-bottom: 30px;
+
+    }
+
+    #message_counter
+    {
+     border-radius: 50%;
+      background: #fff!important;
+      padding: 8px;
+      margin-top: -10px;
+      margin-right: 37vw;
+    }
+
+       #sidebar .nav-item
+    {
+      min-height:30px!important;
+      padding-top: 4px!important;
+      border-bottom: 1px #005B96 solid!important;
+        border-top: 1px #005B96 solid!important;
+        box-shadow:border-box!important;
+
+    }
+    }
+
+
+    .goog-te-banner-frame {display:none;} // Don't show Google Topbar
+// #goog-gt-tt {display:none!important;visibility:hidden!important;}
+
+#google_translate_element {
+
+  right: 16px!important;
+  // z-index: 99999;
+}
+.goog-te-gadget {
+  font-family: Roboto, 'Open Sans', sans-serif!important;
+  text-transform: uppercase;
+}
+
+.goog-te-menu2 {
+  max-width: 100%;
+}
+.goog-te-menu-value {
+  color: #fff !important;
+    &:before {
+    font-family: 'Material Icons';
+    content: "\E927";
+    margin-right: 56px;
+      font-size: 12px;
+    vertical-align: -10px;
+    // width:32px!important;
+
+  } 
+}
+.goog-te-menu-value span:nth-child(5) {
+  display:none;
+}
+.goog-te-menu-value span:nth-child(3) {
+  border:none!important;
+  font-family: 'Material Icons';
+  &:after {
+    font-family: 'Material Icons';
+    content: "\E5C5";
+    font-size: 1.5rem;
+    vertical-align: -6px;
+  }  
+}
+
+.goog-te-gadget-icon {
+    background-image: url(https://placehold.it/32)!important;
+    background-position: 0px 0px;
+    height: 32px!important;
+    width: 32px!important;
+    margin-right: 8px!important;
+    //     OR
+    display: none;
+}
+ #google_translate_element select {
+ 
+
+  background: #fff!important;
+ color: #000!important;
+ border-radius: 10px!important;
+ padding:1px;
+
+
+
+
+}
+
+.goog-te-banner-frame.skiptranslate {display: none !important;} 
+
+.goog-te-banner-frame.skiptranslate {display: none!important;} 
+body {top: 0px!important;}
+
+/* ================================== *\
+    Mediaqueries
+\* ================================== */
+@media (max-width: 667px) {
+  #google_translate_element {
+    bottom: calc(100% - 50% - 53px);
+    left: 70px!important;
+    width: 150px!important;
+}
+    .goog-te-gadget {
+      width:100%!important;
+    }
+    .skiptranslate {
+      width:100%!important;     
+    }
+   
+
+
+  }
+  #google_translate_element { height: 26px !important; overflow: hidden !important; }
+@media(max-width: 1025px)
+{
+    #google_translate_element {
+ 
+
+
+  margin-left: 30vw!important;
+ 
+  // z-index: 99999;
+
+
+
+}
+
+ #google_translate_element select {
+ 
+
+  background: #000011!important;
+ color: #fff!important;
+ border-radius: 10px!important;
+
+
+
+
+}
+.goog-te-gadget-simple   {
+  background-color: navy!important;
+  border: 1px solid rgba(255,255,255,0.50) !important;
+  padding: 1px!important;
+  border-radius: 10px!important;
+  font-size: 12px!important;
+  width: 100%!important;
+  display:block!important;
+  height: 30px;
+  cursor: pointer;
+  zoom: 1;
+  text-align: center;
+}
+.goog-te-gadget-simple  div
+{
+    background: navy!important;
+}
+}
+}
+
+
+
+  </style>
+</head>
+
+
+<body class="hold-transition sidebar-mini layout-fixed">
+    <div class="wrapper">
+    
+      <!-- Preloader -->
+      !<!--<div class="preloader flex-column justify-content-center align-items-center">
+        <img class="animation__shake" src="/design_image/icon.png" alt="AdminLTELogo" height="60" width="60">
+      </div>-->
+      
+    <!-- Navbar -->
+    <nav class="main-header navbar navbar-expand-md  shadow-sm" id="main_header">
+     <div class="container">
+      <!-- Left navbar links -->
+      <ul class="navbar-nav ">
+        <li class="nav-item">
+          <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars text-white"></i></a>
+        </li>
+    
+    
+      </ul>
+      <ul class="navbar-nav ">
+       <li class="nav-item">
+        <a class="nav-link" data-widget="fullscreen" href="#" role="button">
+          <i class="fas fa-expand-arrows-alt text-warning"></i>
+        </a>
+      </li>
+    
+    </ul>
+     <ul class="navbar-nav ">
+    <button class="btn-0 " id="acc_btn">
+      <%= req.user.account_type.toUpperCase() %> 
+    </button>
+    </ul>
+    <ul class="navbar-nav ">
+     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="fa fa-bars text-success"></span>
+    </button>
+    
+    
+    </ul>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <!-- Right navbar links -->
+      <ul class="navbar-nav ml-auto">
+        <!-- Navbar Search -->
+        <li class="nav-item">
+            <!--<a class="nav-link" data-widget="navbar-search" href="#" role="button">
+              <i class="fas fa-search"></i>
+            </a>-->
+            <div class="navbar-search-block">
+              <form class="form-inline">
+                <div class="input-group input-group-sm">
+                  <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
+                  <div class="input-group-append">
+                    <button class="btn btn-navbar" type="submit">
+                      <i class="fas fa-search"></i>
+                    </button>
+                    <button class="btn btn-navbar" type="button" data-widget="navbar-search">
+                      <i class="fas fa-times"></i>
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </li>
+    
+    
+    
+       <!-- Notifications Dropdown Menu -->
+       <li class="nav-item dropdown text-center" id="notificationsIcon">
+        <a class="nav-link"  href="/message">
+          <i class="far fa-bell text-white " id="message_count"></i>
+          <span class="badge badge-warning navbar-badge" id="message_counter">0</span>
+        </a>
+    
+      </li>
+    
+    
+      <!-- Notifications Dropdown Menu -->
+      <li class="nav-item dropdown text-center" id="user_badge">
+        <a class="nav-link d-flex align-items-center justify-content-center pt-3" data-toggle="dropdown" href="#">
+          <p><i class="far fa-user text-warning mr-2" id="user_icon"></i></p>
+          <p class="text-white small" > 
+          <%= req.user.fullname %>
+           <br>REG ID:  
+          X<%= String(req.user.id).slice(3,11) %>
+          </p>
+        </a>
+        </li>
+    
+           <li class="nav-item dropdown text-center" id="notificationsIcon">
+            <div id="google_translate_element" class="text-center">
+             
+    
+         </div>
+       </li>
+    
+          <!--
+          <li class="nav-item">
+            <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button">
+              <i class="fas fa-th-large text-success"></i>
+            </a>
+          </li>
+        -->
+      </ul>
+    
+    
+    </div>
+    
+    </div>
+    </nav>
+      <!-- /.navbar -->
+    
+    
+    
+     
+      <!-- Main Sidebar Container -->
+    <aside class="main-sidebar sidebar-dark-primary elevation-4 pt-4 pb-4" id="sidebar">
+      <!-- Brand Logo -->
+      <a href="/home" class="brand-link text-center">
+        <img src="https://image.freepik.com/free-vector/bitcoin-golden-logo_48369-12177.jpg" alt="Logo" class="" width="100"  style="border-radius: 50%;">
+        
+      </a>
+    
+      <!-- Sidebar -->
+      <div class="sidebar">
+    
+    
+        <!-- Sidebar Menu -->
+        <nav class="mt-2 mb-5">
+          <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false" >
+              <!-- Add icons to the links using the .nav-icon class
+              with font-awesome or any other icon font library -->
+              
+                            <li class="nav-item menu-open">
+                <a href="/dashboard" class="nav-link ">
+                  <i class="nav-icon fas fa-home"></i>
+                  <p>
+                    Dashboard
+    
+                  </p>
+                </a>
+              </li>
+    
+              <!-- <li class="nav-item ">
+                <a href="/" class="nav-link ">
+                  <i class="nav-icon fas fa-bars"></i>
+                  <p>
+                    Live Trade
+                   
+                  </p>
+                </a>
+              </li>-->
+    
+    
+            
+    
+              <li class="nav-item">
+                <a href="/investment" class="nav-link">
+                  <i class="nav-icon fas fa-credit-card"></i>
+                  <p>
+                   Investment
+                   
+                 </p>
+               </a>
+             </li>
+             
+    
+             <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-money"></i>
+                <p>
+                  Deposit
+                  <i class="fas fa-angle-left right"></i>
+    
+                </p>
+              </a>
+              
+              <ul class="nav nav-treeview " >
+    
+               <li class="nav-item">
+                <a href="/topup" class="nav-link">
+                  <i class="nav-icon far fa-circle"></i>
+                  <p>
+                   Top Up
+                   
+                 </p>
+               </a>
+             </li>
+             <li class="nav-item">
+              <a href="/deposit_history" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>History</p>
+              </a>
+            </li>
+    
+    
+    
+          </ul>
+        </li> 
+    
+    
+    
+    
+        <li class="nav-item">
+          <a href="#" class="nav-link">
+            <i class="nav-icon fas fa-address-book"></i>
+            <p>
+              Manage Withdraw
+              <i class="fas fa-angle-left right"></i>
+    
+            </p>
+          </a>
+    
+          <ul class="nav nav-treeview " >
+            <li class="nav-item">
+              <a href="/withdraw" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Withdraw</p>
+              </a>
+            </li>
+    
+    
+            <!-- <li class="nav-item">
+              <a href="/withdrawal_settings" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Settings</p>
+              </a>
+            </li> -->
+    
+          </ul>
+        </li> 
+    
+    
+        <li class="nav-item">
+          <a href="/upgrade" class="nav-link">
+            <i class="nav-icon fas fa-level-up-alt"></i>
+            <p>
+              Upgrade Account
+    
+            </p>
+          </a>
+        </li>
+    
+    
+        <li class="nav-item">
+          <a href="/trade-returns" class="nav-link">
+            <i class="nav-icon fas fa-fw fa-money"></i>
+            <p>
+              Returns
+    
+            </p>
+          </a>
+        </li>
+    
+    
+    
+    
+    
+    
+        <li class="nav-item">
+          <a href="/message" class="nav-link">
+            <i class="nav-icon fas fa-fw fa-envelope"></i>
+            <p>
+             Message
+    
+           </p>
+         </a>
+       </li>
+    
+    
+    
+    
+           <!--    <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="nav-icon fas fa-fw fa-check"></i>
+                  <p>
+               Account verified
+                   
+                  </p>
+                </a>
+              </li>
+            -->
+    
+            <li class="nav-item">
+              <a href="/support" class="nav-link">
+                <i class="nav-icon fas fa-fw fa-comment"></i>
+                <p>
+                 Customer support
+    
+               </p>
+             </a>
+           </li>
+    
+           <li class="nav-item">
+            <a href="/profile" class="nav-link">
+              <i class="nav-icon fas fa-fw fa-user"></i>
+              <p>
+                Profile
+    
+              </p>
+            </a>
+          </li>
+    
+    <li class="nav-item">
+      <a href="#" class="nav-link" onclick="logout()">
+        <i class="nav-icon fa fa-power-off text-danger"></i>
+        <p>Logout</p>
+      </a>
+    </li>
+    
+    </ul>
+    
+    </nav>
+    <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+    </aside>
+    
+    <script type="text/javascript">
+      function logout()
+      {
+        if(confirm("Are You sure you want to logout?"))
+        {
+    
+    
+    
+         $.ajax({
+          method:'POST',
+    
+          url: "/logout",
+    
+          data:'',
+          cache : false,
+          contentType: false,
+          processData: false,
+          headers: {
+    
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content'),
+    
+          },
+          success: (response) => {
+            window.location.href='/';   
+    
+          },
+          error: function(response){
+            $(document).Toasts('create', {
+              class: 'bg-danger',
+              title: ' error message',
+              subtitle: '',
+              autohide:true,
+              delay: 3000,
+              fade:true,
+              body:'failed',
+            })
+    
+    
+          },
+    
+    
+    
+        });
+       }
+     }
+    </script>
+
+    <%-body%>
+    
+    </section>
+             
+    </div>
+    
+      </div>
+      <!-- /.content-wrapper -->
+      <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-fullscreen-lg-down" role="document">
+        <div class="modal-content upgrade">
+          <div class="modal-header">
+            <h5 class="modal-title border-0" id="exampleModalLabel" style="color: gold;">Upgrade Notice</h5>
+           <button type="button" class="btn-danger close btn btn-sm " data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">OK</span>
+            </button>
+          </div>
+          <div class="modal-body border-0 col-lg-4 offset-lg-4 bg-0 " style="padding-top: 100px; opacity: 1; ">
+            <div class="text-center text-danger bolder"><h3>Please Upgrade Your Account Within 72hrs</h3></div>
+    
+             
+          </div>
+          <div class="modal-footer border-0">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+     <footer class="main-footer">
+        <strong class="small">
+        Copyright &copy;  FXTM 2011-2021
+    FXTM is a registered brand name of Exinity Limited, regulated by the Financial Services Commission of Mauritius with license number C113012295.
+        <div class="float-right d-none d-sm-inline-block">
+          <b>Version</b> 3.1.0
+        </div>
+      </footer>
+      <!-- Control Sidebar -->
+      <aside class="control-sidebar control-sidebar-dark">
+        <!-- Control sidebar content goes here -->
+      </aside>
+      <!-- /.control-sidebar -->
+    </div>
+    <!-- ./wrapper -->
+    
+
+
+
+
+<!-- jQuery -->
+<script src="/admins/plugins/jquery/jquery.min.js"></script>
+<!-- jQuery UI 1.11.4 -->
+<script src="/admins/plugins/jquery-ui/jquery-ui.min.js"></script>
+<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+<script>
+  $.widget.bridge('uibutton', $.ui.button)
+</script>
+<!-- Bootstrap 4 -->
+<script src="/admins/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- ChartJS -->
+<script src="/admins/plugins/chart.js/Chart.min.js"></script>
+<!-- Sparkline -->
+<script src="/admins/plugins/sparklines/sparkline.js"></script>
+<!-- JQVMap -->
+<script src="/admins/plugins/jqvmap/jquery.vmap.min.js"></script>
+<script src="/admins/plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
+<!-- jQuery Knob Chart -->
+<script src="/admins/plugins/jquery-knob/jquery.knob.min.js"></script>
+<!-- daterangepicker -->
+<script src="/admins/plugins/moment/moment.min.js"></script>
+<script src="/admins/plugins/daterangepicker/daterangepicker.js"></script>
+<!-- Tempusdominus Bootstrap 4 -->
+<script src="/admins/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+<!-- Summernote -->
+<script src="/admins/plugins/summernote/summernote-bs4.min.js"></script>
+<!-- overlayScrollbars -->
+<script src="/admins/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+<!-- AdminLTE App -->
+
+
+<script src="/admins/plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="/admins/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+<script src="/admins/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+<script src="/admins/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+<script src="/admins/plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+<script src="/admins/plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+<script src="/admins/plugins/jszip/jszip.min.js"></script>
+<script src="/admins/plugins/pdfmake/pdfmake.min.js"></script>
+<script src="/admins/plugins/pdfmake/vfs_fonts.js"></script>
+<script src="/admins/plugins/datatables-buttons/js/buttons.html5.min.js"></script>
+<script src="/admins/plugins/datatables-buttons/js/buttons.print.min.js"></script>
+<script src="/admins/plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
+<script src="/admins/dist/js/adminlte.js"></script>
+<!-- AdminLTE for demo purposes -->
+
+<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+
+<script src="/admins/dist/js/demo.js"></script>
+<!-- custom js -->
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: false,   autoDisplay:false}, 'google_translate_element');
+}
+
+
+</script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+
+ <script type="text/javascript">
+
+    $(window).on('load', function() {
+
+      var x =  "0";
+      if(x ==1)
+      {
+        $('#exampleModal').modal('show');
+      }
+    });
+
+  
+</script>
+
+
+</body>
+</html>

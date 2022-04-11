@@ -1,0 +1,143 @@
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper ">
+
+  
+    <!-- top tiles -->
+    <div class="container-fluid" style="background: #04396D;">
+      <div class="row tile_count">
+        <div class="col-md-2 col-sm-4 col-6 tile_stats_count p-2">
+        <div class="card p-3 bg-navy">
+          <span class="count_top"><i class="fa fa-money"></i> Balance</span>
+          <div class="count" style=""><%=req.user.currency%> <%= req.user.balance.toFixed(2) %></div>
+          <span class="count_bottom"><i class="text-success">Available </i> Balance</span>
+          </div>
+        </div>
+        <div class="col-md-2 col-sm-4 col-6 tile_stats_count p-2">
+         <div class="card p-3 bg-secondary">
+          <span class="count_top"><i class="fa fa-clock-o"></i> Invested</span>
+          <div class="count" style=""><%=req.user.currency%> <%= req.user.invested.toFixed(2) %></div>
+          <span class="count_bottom"><i class="text-warning"><i class="fa fa-sort-asc"></i>Trade</i> Ongoing</span>
+          </div>
+        </div>
+        <div class="col-md-2 col-sm-4 col-6 tile_stats_count p-2">
+         <div class="card p-3 bg-navy">
+          <span class="count_top"><i class="fa fa-shield"></i> Account Type</span>
+          <div class="count text-success bolder" style="font-weight: bolder;"> <%= req.user.account_type %> </div>
+          <span class="count_bottom"><i class="text-success"><i class="fa fa-sort-asc"></i>Trade </i> Account Type</span>
+          </div>
+        </div>
+                    <div class="col-md-2 col-sm-4 col-6 tile_stats_count p-2">
+         <div class="card p-3 bg-navy">
+          <span class="count_top"><i class="fa fa-arrow-down"></i> Total Withdrawals</span>
+          <div class="count" style=""><%=req.user.currency%> <%= req.user.total_withdraw.toFixed(2) %></div>
+          <span class="count_bottom"><i class="text-success"><i class="fa fa-sort-asc"></i>Withdrawals </i> </span>
+          </div>
+        </div>
+        <div class="col-md-2 col-sm-4 col-6 tile_stats_count p-2" style="border-right: 0;">
+         <div class="card p-3 bg-dark">
+          <span class="count_top"><i class="fa fa-credit-card"></i> Total Profit</span>
+          <div class="count" style=""><%=req.user.currency%> <%= req.user.total_profit.toFixed(2) %></div>
+          <span class="count_bottom"><i class="text-success"><i class="fa fa-sort-asc"></i>32% </i> From last Week</span>
+          </div>
+        </div>
+      </div>
+      </div>
+ 
+           <!-- /top tiles -->
+ 
+              <div class="container-fluid" >
+ 
+      <div style="position: fixed; margin-left: 20px; background: #fff; border-radius: 15px; padding: 10px;  bottom: 10%; z-index: 1000;"><a href="https://api.whatsapp.com/send/?phone=12144821285‬&amp;text&amp;app_absent=0"><i class="fa fa-whatsapp text-success whatsapp"></i></a></div>
+                <div style="position: fixed; right: 0; bottom: 10%; font-size: 30px; z-index: 1000;"></div>
+ <div wire:id="lReOSoshCzd3AVbibo9j" wire:initial-data="{&quot;fingerprint&quot;:{&quot;id&quot;:&quot;lReOSoshCzd3AVbibo9j&quot;,&quot;name&quot;:&quot;user-withdrawal-method&quot;,&quot;locale&quot;:&quot;en&quot;},&quot;effects&quot;:{&quot;listeners&quot;:[]},&quot;serverMemo&quot;:{&quot;children&quot;:[],&quot;errors&quot;:[],&quot;htmlHash&quot;:&quot;2e9e0db9&quot;,&quot;data&quot;:[],&quot;dataMeta&quot;:[],&quot;checksum&quot;:&quot;5899584b68bbcc26cb6ef85c336834116f6e158507d37edbe07fc15551d950bc&quot;}}">
+ 
+   <div class="col-12 p-2 d-flex justify-content-between align-items-center p_header">
+ 
+     <h5 class="text-success"><img src="https://assets-global.website-files.com/5e0f5241100da43ea2593874/5f3d5e05e7aaa02001ba8156_5ef7972e3ce721604aff87c0_Withdrawals.svg" width="120" height="50"><b> Withdrawal Method</b>
+ </h5>
+ 
+ 
+ </div>
+ <div class="container-fluid ">
+ 
+    <div>
+    <div class="col-12 p-3">
+      <p>You are to fill your best available option to receive your fund</p>
+    </div>
+ 
+ 
+    <div class="col-12" >
+         </div>
+        <div class="row">
+                       <div class="col-lg-4 mb-3">
+            <form action="https://acc.pureforexcrypto.com/updateuws" method="post" class="bg-white p-3" >
+          <input type="hidden" name="method_id" value="7">
+          <input type="hidden" name="title" value="BANK TRANSFER ">
+          <input type="hidden" name="_token" value="rt727BMOKzZGK1TFMfyLsTBt5gbuOwYJjBm0hyvZ">
+                <h4> BANK TRANSFER </h4>
+                  <img src="/storage/icon/0.14922000 16417435482BFD78F8-A5B6-4473-8905-FCC8987DC237.jpeg" width="100" height="100" >
+                      <hr>
+                           
+                
+                <div class="form-group">
+                             <label>BANK NAME </label>
+ 
+                    <input type="text" name="label[]" class="form-control roundInput" value="">
+                                <label>ACCOUNT NAME </label>
+ 
+                    <input type="text" name="label[]" class="form-control roundInput" value="">
+                                <label>ACCOUNT NUMBER </label>
+ 
+                    <input type="text" name="label[]" class="form-control roundInput" value="">
+                                </div>
+           
+                
+            
+ 
+                <div class="form-group">
+            <button class="btn-block btn btn-success roundButton">Save</button>
+                </div>
+            </form>
+            </div>
+                       <div class="col-lg-4 mb-3">
+            <form action="https://acc.pureforexcrypto.com/updateuws" method="post" class="bg-white p-3" >
+          <input type="hidden" name="method_id" value="8">
+          <input type="hidden" name="title" value="CASH APP">
+          <input type="hidden" name="_token" value="rt727BMOKzZGK1TFMfyLsTBt5gbuOwYJjBm0hyvZ">
+                <h4> CASH APP</h4>
+                  <img src="/storage/icon/0.65911700 164281028551ADDC2F-08D7-41F8-A426-CA6FB32CBE20.png" width="100" height="100" >
+                      <hr>
+                           
+                
+                <div class="form-group">
+                             <label>CASH APP NAME </label>
+ 
+                    <input type="text" name="label[]" class="form-control roundInput" value="">
+                                <label>CASH APP TAG</label>
+ 
+                    <input type="text" name="label[]" class="form-control roundInput" value="">
+                                </div>
+           
+                
+            
+ 
+                <div class="form-group">
+            <button class="btn-block btn btn-success roundButton">Save</button>
+                </div>
+            </form>
+            </div>
+                   </div>
+    </div>
+ </div>
+ </div>
+ 
+ 
+ 
+ 
+          
+ </div>
+ 
+   </div>
+   <!-- /.content-wrapper -->
+ 

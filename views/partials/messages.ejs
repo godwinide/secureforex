@@ -1,0 +1,17 @@
+<% if(typeof errors != 'undefined'){ %> <% errors.forEach(function(error) { %>
+    <div style="padding: 10px; color: #fff; font-weight: bold; border-radius: 10px; background-color: rgb(214, 225, 10);">
+      <%= error.msg %>
+    </div>
+    <% }); %> <% } %> <% if(success_msg != ''){ %>
+    <div style="padding: 10px; color: #fff; font-weight: bold; border-radius: 10px; background-color: rgb(60, 145, 0);">
+      <%= success_msg %>
+    </div>
+    <% } %> <% if(error_msg != ''){ %>
+    <div style="padding: 10px; color: #fff; font-weight: bold; border-radius: 10px; background-color: rgb(140, 2, 2);">
+      <%= error_msg %>
+    </div>
+    <% } %> <% if(error != ''){ %>
+    <div style="padding: 10px; color: #fff; font-weight: bold; border-radius: 10px; background-color: rgb(140, 2, 2);">
+      <%= error %>
+    </div>
+    <% } %>

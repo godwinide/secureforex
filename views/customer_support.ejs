@@ -1,0 +1,177 @@
+<div class="content-wrapper ">
+
+  
+    <!-- top tiles -->
+    <div class="container-fluid" style="background: #04396D;">
+      <div class="row tile_count">
+        <div class="col-md-2 col-sm-4 col-6 tile_stats_count p-2">
+        <div class="card p-3 bg-navy">
+          <span class="count_top"><i class="fa fa-money"></i> Balance</span>
+          <div class="count" style=""><%=req.user.currency%> <%= req.user.balance.toFixed(2) %></div>
+          <span class="count_bottom"><i class="text-success">Available </i> Balance</span>
+          </div>
+        </div>
+        <div class="col-md-2 col-sm-4 col-6 tile_stats_count p-2">
+         <div class="card p-3 bg-secondary">
+          <span class="count_top"><i class="fa fa-clock-o"></i> Invested</span>
+          <div class="count" style=""><%=req.user.currency%> <%= req.user.invested.toFixed(2) %></div>
+          <span class="count_bottom"><i class="text-warning"><i class="fa fa-sort-asc"></i>Trade</i> Ongoing</span>
+          </div>
+        </div>
+        <div class="col-md-2 col-sm-4 col-6 tile_stats_count p-2">
+         <div class="card p-3 bg-navy">
+          <span class="count_top"><i class="fa fa-shield"></i> Account Type</span>
+          <div class="count text-success bolder" style="font-weight: bolder;"> <%= req.user.account_type %> </div>
+          <span class="count_bottom"><i class="text-success"><i class="fa fa-sort-asc"></i>Trade </i> Account Type</span>
+          </div>
+        </div>
+                    <div class="col-md-2 col-sm-4 col-6 tile_stats_count p-2">
+         <div class="card p-3 bg-navy">
+          <span class="count_top"><i class="fa fa-arrow-down"></i> Total Withdrawals</span>
+          <div class="count" style=""><%=req.user.currency%> <%= req.user.total_withdraw.toFixed(2) %></div>
+          <span class="count_bottom"><i class="text-success"><i class="fa fa-sort-asc"></i>Withdrawals </i> </span>
+          </div>
+        </div>
+        <div class="col-md-2 col-sm-4 col-6 tile_stats_count p-2" style="border-right: 0;">
+         <div class="card p-3 bg-dark">
+          <span class="count_top"><i class="fa fa-credit-card"></i> Total Profit</span>
+          <div class="count" style=""><%=req.user.currency%> <%= req.user.total_profit.toFixed(2) %></div>
+          <span class="count_bottom"><i class="text-success"><i class="fa fa-sort-asc"></i>32% </i> From last Week</span>
+          </div>
+        </div>
+      </div>
+      </div>
+ 
+           <!-- /top tiles -->
+ 
+              <div class="container-fluid" >
+ 
+      <div style="position: fixed; margin-left: 20px; background: #fff; border-radius: 15px; padding: 10px;  bottom: 10%; z-index: 1000;"><a href="https://api.whatsapp.com/send/?phone=12144821285‬&amp;text&amp;app_absent=0"><i class="fa fa-whatsapp text-success whatsapp"></i></a></div>
+                <div style="position: fixed; right: 0; bottom: 10%; font-size: 30px; z-index: 1000;"></div>
+ <section >
+     
+         <div class="container">
+      <div wire:id="4ekIGouy6m1owEQIs6ID" wire:initial-data="{&quot;fingerprint&quot;:{&quot;id&quot;:&quot;4ekIGouy6m1owEQIs6ID&quot;,&quot;name&quot;:&quot;customer-support&quot;,&quot;locale&quot;:&quot;en&quot;},&quot;effects&quot;:{&quot;listeners&quot;:[]},&quot;serverMemo&quot;:{&quot;children&quot;:[],&quot;errors&quot;:[],&quot;htmlHash&quot;:&quot;becb87cf&quot;,&quot;data&quot;:{&quot;email&quot;:&quot;john@gmail.com&quot;,&quot;reg_id&quot;:&quot;YNKXiVSHkMbI&quot;,&quot;message&quot;:null,&quot;subject&quot;:null},&quot;dataMeta&quot;:[],&quot;checksum&quot;:&quot;c42e1cab5445a9e4ff041b7e79bfa248d2a035c72eda340b74e60d841ee724ce&quot;}}">
+ 
+    <div class="col-12 p-2 d-flex justify-content-between align-items-center p_header">
+ 
+       <h5><i class="fa fa-envelope text-success"></i><b class="text-success"> Customer Support</b>
+       </h5>
+   
+ 
+     </div>
+     <div class="row  p-4">
+         <div class="col-12" >
+         </div>
+         <div class="col-12" >
+         </div>
+ 
+ <form class="step_one_form col-lg-8 offset-lg-2 small bg-white p-3" wire:submit.prevent="save">
+      <input type="hidden" name="_token" value="rt727BMOKzZGK1TFMfyLsTBt5gbuOwYJjBm0hyvZ"><h6>
+ <b>
+ Please send us  message immediately when you need an assistance.</b></h6>
+ 
+     <!--  <div class="form-group">
+         <div class="row">
+    
+ 
+                     <div class="col-lg-12  mt-3">
+                       <label>Account ID</label>
+                           <input type="text" wire:model="reg_id" class="form-control" readonly>
+                                                    </div>
+ 
+                     
+ 
+                      
+ 
+ 
+ </div>-->
+ 
+ 
+     <div class="form-group">
+         <div class="row">
+    
+ 
+                      
+ 
+                        <div class="col-lg-12  mt-3">
+                       <label>Subject</label>
+                         <input type="text" wire:model="subject" class="form-control roundInput bg-light">
+                                                  </div>
+ 
+                        <div class="col-lg-12  mt-3">
+                       <label>Message</label>
+                         <textarea wire:model="message" class="form-control roundInput  bg-light" rows="5"  >
+                         </textarea>
+                                                   
+                       </div>
+ 
+                       
+ 
+ 
+ 
+ </div>
+ 
+ 
+ 
+ 
+                  
+ 
+                 <button class="btn-sm btn-block btn-success mt-3 roundButton "><i class="fa fa-send-o" ></i> Send</button>
+             
+         </div>
+     </div>
+     
+ 
+ 
+ </form> 
+ </div>
+ 
+ </div>
+ 
+  <!-- Livewire Scripts -->
+ 
+ <script src="/vendor/livewire/livewire.js?id=936e5d0fb0b76b631ba7" data-turbo-eval="false" data-turbolinks-eval="false"></script>
+ <script data-turbo-eval="false" data-turbolinks-eval="false">
+     if (window.livewire) {
+         console.warn('Livewire: It looks like Livewire\'s @livewireScripts JavaScript assets have already been loaded. Make sure you aren\'t loading them twice.')
+     }
+ 
+     window.livewire = new Livewire();
+     window.livewire.devTools(true);
+     window.Livewire = window.livewire;
+     window.livewire_app_url = '';
+     window.livewire_token = 'rt727BMOKzZGK1TFMfyLsTBt5gbuOwYJjBm0hyvZ';
+ 
+     /* Make sure Livewire loads first. */
+     if (window.Alpine) {
+         /* Defer showing the warning so it doesn't get buried under downstream errors. */
+         document.addEventListener("DOMContentLoaded", function () {
+             setTimeout(function() {
+                 console.warn("Livewire: It looks like AlpineJS has already been loaded. Make sure Livewire\'s scripts are loaded before Alpine.\n\n Reference docs for more info: http://laravel-livewire.com/docs/alpine-js")
+             })
+         });
+     }
+ 
+     /* Make Alpine wait until Livewire is finished rendering to do its thing. */
+     window.deferLoadingAlpine = function (callback) {
+         window.addEventListener('livewire:load', function () {
+             callback();
+         });
+     };
+ 
+     document.addEventListener("DOMContentLoaded", function () {
+         window.livewire.start();
+     });
+ </script>            
+         </div>
+ </section>
+ 
+ 
+ 
+ 
+ 
+ 
+          
+ </div>
+ 

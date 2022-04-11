@@ -1,0 +1,319 @@
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper ">
+
+  
+    <!-- top tiles -->
+    <div class="container-fluid" style="background: #04396D;">
+        <div class="row tile_count">
+          <div class="col-md-2 col-sm-4 col-6 tile_stats_count p-2">
+          <div class="card p-3 bg-navy">
+            <span class="count_top"><i class="fa fa-money"></i> Balance</span>
+            <div class="count" style=""><%=req.user.currency%> <%= req.user.balance.toFixed(2) %></div>
+            <span class="count_bottom"><i class="text-success">Available </i> Balance</span>
+            </div>
+          </div>
+          <div class="col-md-2 col-sm-4 col-6 tile_stats_count p-2">
+           <div class="card p-3 bg-secondary">
+            <span class="count_top"><i class="fa fa-clock-o"></i> Invested</span>
+            <div class="count" style=""><%=req.user.currency%> <%= req.user.invested.toFixed(2) %></div>
+            <span class="count_bottom"><i class="text-warning"><i class="fa fa-sort-asc"></i>Trade</i> Ongoing</span>
+            </div>
+          </div>
+          <div class="col-md-2 col-sm-4 col-6 tile_stats_count p-2">
+           <div class="card p-3 bg-navy">
+            <span class="count_top"><i class="fa fa-shield"></i> Account Type</span>
+            <div class="count text-success bolder" style="font-weight: bolder;"> <%= req.user.account_type %> </div>
+            <span class="count_bottom"><i class="text-success"><i class="fa fa-sort-asc"></i>Trade </i> Account Type</span>
+            </div>
+          </div>
+                      <div class="col-md-2 col-sm-4 col-6 tile_stats_count p-2">
+           <div class="card p-3 bg-navy">
+            <span class="count_top"><i class="fa fa-arrow-down"></i> Total Withdrawals</span>
+            <div class="count" style=""><%=req.user.currency%> <%= req.user.total_withdraw.toFixed(2) %></div>
+            <span class="count_bottom"><i class="text-success"><i class="fa fa-sort-asc"></i>Withdrawals </i> </span>
+            </div>
+          </div>
+          <div class="col-md-2 col-sm-4 col-6 tile_stats_count p-2" style="border-right: 0;">
+           <div class="card p-3 bg-dark">
+            <span class="count_top"><i class="fa fa-credit-card"></i> Total Profit</span>
+            <div class="count" style=""><%=req.user.currency%> <%= req.user.total_profit.toFixed(2) %></div>
+            <span class="count_bottom"><i class="text-success"><i class="fa fa-sort-asc"></i>32% </i> From last Week</span>
+            </div>
+          </div>
+        </div>
+        </div>
+ 
+           <!-- /top tiles -->
+ 
+              <div class="container-fluid" >
+ 
+      <div style="position: fixed; margin-left: 20px; background: #fff; border-radius: 15px; padding: 10px;  bottom: 10%; z-index: 1000;"><a href="https://api.whatsapp.com/send/?phone=12144821285‬&amp;text&amp;app_absent=0"><i class="fa fa-whatsapp text-success whatsapp"></i></a></div>
+                <div style="position: fixed; right: 0; bottom: 10%; font-size: 30px; z-index: 1000;"></div>
+ 
+      <section wire:id="mvFlSERPG01jOJ5PhG5L" wire:initial-data="{&quot;fingerprint&quot;:{&quot;id&quot;:&quot;mvFlSERPG01jOJ5PhG5L&quot;,&quot;name&quot;:&quot;investmentwire&quot;,&quot;locale&quot;:&quot;en&quot;},&quot;effects&quot;:{&quot;listeners&quot;:[],&quot;path&quot;:&quot;https:\/\/acc.pureforexcrypto.com\/upgrade&quot;},&quot;serverMemo&quot;:{&quot;children&quot;:[],&quot;errors&quot;:[],&quot;htmlHash&quot;:&quot;d83f924e&quot;,&quot;data&quot;:{&quot;search&quot;:&quot;&quot;,&quot;bplan&quot;:null,&quot;min_amount&quot;:null,&quot;max_amount&quot;:null,&quot;investMode&quot;:false,&quot;select_id&quot;:null,&quot;amount&quot;:null,&quot;page&quot;:1},&quot;dataMeta&quot;:[],&quot;checksum&quot;:&quot;1065bbcb1c5ad7b10cda6035e5ad177ff7594bece2c936d02cc1ffab395273a6&quot;}}">
+     
+       <div class="col-12 p-2 d-flex justify-content-between align-items-center p_header">
+ 
+     <h5 class="text-success"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLpb84sX8BvBoElnwFiCX0YU8r4ar6-eJhr1ANbv6M8FPcDUOeZGuPyc00L0-RHQO5zDA&usqp=CAU" width="120" height="50"><b>  Upgrade Account</b>
+ </h5>
+ 
+ 
+ </div>
+ <div class="container-fluid p-4">
+   <div class="bg-success  small mb-4" style="padding-top: 1px; padding-left: 2px; padding-right: 2px; "><p>Upgrade your trading account to a level that best fits your trading experience and have access to several trading benefits. Your current account level is "Basic"</p></div>
+   <%-include("./partials/messages")%>
+</div>
+ 
+ 
+ 
+ 
+ 
+ <div class="col-12" >
+         </div>
+         <div class="col-12" >
+         </div>
+ 
+         <div class="col-12" >
+ 
+         </div>
+   
+         <div class="offset-lg-1 col-lg-10">
+         <div class="row mt-5">
+ 
+                 <div class=" col-lg-4 mt-4">
+         <div class="card p-2 text-center" style="box-shadow: 0px 0px 4px 9px #f4f4f4; margin-left: 10px; margin-right: 10px;">
+ 
+    
+         <h4 class="text-center mb-2 mt-3 text-success">
+         <b>           <%=req.user.balance.toFixed(2)%> <%= req.user.currency%>
+                         </b>
+         </h4>
+         <br>
+              <h5 class="text-center"><img src="/image/silver.jpg" width="100"></h5>
+              <br>
+ 
+                              
+         <p style="line-height:0.6em; border-bottom: 1px solid #4caf50;" class="card p-2">24/7 Customer Service</p>
+                
+                              
+         <p style="line-height:0.6em; border-bottom: 1px solid #4caf50;" class="card p-2">Professional Chart</p>
+                
+                              
+         <p style="line-height:0.6em; border-bottom: 1px solid #4caf50;" class="card p-2">Trading Alert</p>
+                
+                              
+         <p style="line-height:0.6em; border-bottom: 1px solid #4caf50;" class="card p-2">Trading Central(Basic)</p>
+                
+                              
+         <p style="line-height:0.6em; border-bottom: 1px solid #4caf50;" class="card p-2">A Personal Coach</p>
+                
+                              
+         <p style="line-height:0.6em; border-bottom: 1px solid #4caf50;" class="card p-2">4,000 USD Bonus</p>
+                
+                              
+         <p style="line-height:0.6em; border-bottom: 1px solid #4caf50;" class="card p-2">SMS &amp; Email Alert</p>
+                
+                              
+         <p style="line-height:0.6em; border-bottom: 1px solid #4caf50;" class="card p-2">Live Trading With Expert</p>
+                
+                
+ 
+    <div class="text-center">
+            <a href="/upgrade/silver" class="btn btn-success btn-block text-white bolder btn-sm roundButton" ><strong>Upgrage</strong></a>
+ 
+ </div>
+     </div>
+ </div>
+             <div class=" col-lg-4 mt-4">
+         <div class="card p-2 text-center" style="box-shadow: 0px 0px 4px 9px #f4f4f4; margin-left: 10px; margin-right: 10px;">
+ 
+    
+         <h4 class="text-center mb-2 mt-3 text-success">
+         <b>           <%=req.user.balance.toFixed(2)%> <%= req.user.currency%>
+                         </b>
+         </h4>
+         <br>
+              <h5 class="text-center"><img src="/image/gold.png" width="100"></h5>
+              <br>
+ 
+                              
+         <p style="line-height:0.6em; border-bottom: 1px solid #4caf50;" class="card p-2">24/7 Customer Service</p>
+                
+                              
+         <p style="line-height:0.6em; border-bottom: 1px solid #4caf50;" class="card p-2">Professional Chart</p>
+                
+                              
+         <p style="line-height:0.6em; border-bottom: 1px solid #4caf50;" class="card p-2">Trading Alert</p>
+                
+                              
+         <p style="line-height:0.6em; border-bottom: 1px solid #4caf50;" class="card p-2">Trading Central(Basic)</p>
+                
+                              
+         <p style="line-height:0.6em; border-bottom: 1px solid #4caf50;" class="card p-2">A Personal Coach</p>
+                
+                              
+         <p style="line-height:0.6em; border-bottom: 1px solid #4caf50;" class="card p-2">4,000 USD Bonus</p>
+                
+                              
+         <p style="line-height:0.6em; border-bottom: 1px solid #4caf50;" class="card p-2">SMS &amp; Email Alert</p>
+                
+                              
+         <p style="line-height:0.6em; border-bottom: 1px solid #4caf50;" class="card p-2">Live Trading With Expert</p>
+                
+                              
+         <p style="line-height:0.6em; border-bottom: 1px solid #4caf50;" class="card p-2">Financial Expert Session</p>
+                
+                              
+         <p style="line-height:0.6em; border-bottom: 1px solid #4caf50;" class="card p-2">Research Website</p>
+                
+                
+ 
+    <div class="text-center">
+            <a href="/upgrade/gold" class="btn btn-success btn-block text-white bolder btn-sm roundButton" ><strong>Upgrage</strong></a>
+ 
+ </div>
+     </div>
+ </div>
+             <div class=" col-lg-4 mt-4">
+         <div class="card p-2 text-center" style="box-shadow: 0px 0px 4px 9px #f4f4f4; margin-left: 10px; margin-right: 10px;">
+ 
+    
+         <h4 class="text-center mb-2 mt-3 text-success">
+         <b>           <%=req.user.balance.toFixed(2)%> <%= req.user.currency%>
+                         </b>
+         </h4>
+         <br>
+              <h5 class="text-center"><img src="/image/platinum.jpg" width="100"></h5>
+              <br>
+ 
+                              
+         <p style="line-height:0.6em; border-bottom: 1px solid #4caf50;" class="card p-2">24/7 Customer Service</p>
+                
+                              
+         <p style="line-height:0.6em; border-bottom: 1px solid #4caf50;" class="card p-2">Professional Chart</p>
+                
+                              
+         <p style="line-height:0.6em; border-bottom: 1px solid #4caf50;" class="card p-2">Trading Alert</p>
+                
+                              
+         <p style="line-height:0.6em; border-bottom: 1px solid #4caf50;" class="card p-2">Trading Central(Basic)</p>
+                
+                              
+         <p style="line-height:0.6em; border-bottom: 1px solid #4caf50;" class="card p-2">A Personal Coach</p>
+                
+                              
+         <p style="line-height:0.6em; border-bottom: 1px solid #4caf50;" class="card p-2">4,000 USD Bonus</p>
+                
+                              
+         <p style="line-height:0.6em; border-bottom: 1px solid #4caf50;" class="card p-2">SMS &amp; Email Alert</p>
+                
+                              
+         <p style="line-height:0.6em; border-bottom: 1px solid #4caf50;" class="card p-2">Live Trading With Expert</p>
+                
+                              
+         <p style="line-height:0.6em; border-bottom: 1px solid #4caf50;" class="card p-2">Financial Expert Session</p>
+                
+                              
+         <p style="line-height:0.6em; border-bottom: 1px solid #4caf50;" class="card p-2">Research Website</p>
+                
+                              
+         <p style="line-height:0.6em; border-bottom: 1px solid #4caf50;" class="card p-2">Customize Platform</p>
+                
+                              
+         <p style="line-height:0.6em; border-bottom: 1px solid #4caf50;" class="card p-2">High Trading Limit/Exposure</p>
+                
+                
+ 
+    <div class="text-center">
+            <a href="/upgrade/diamond" class="btn btn-success btn-block text-white bolder btn-sm roundButton" ><strong>Upgrage</strong></a>
+ 
+ </div>
+     </div>
+ </div>
+             <div class=" col-lg-4 mt-4">
+         <div class="card p-2 text-center" style="box-shadow: 0px 0px 4px 9px #f4f4f4; margin-left: 10px; margin-right: 10px;">
+ 
+    
+         <h4 class="text-center mb-2 mt-3 text-success">
+         <b>           <%=req.user.balance.toFixed(2)%> <%= req.user.currency%>
+                         </b>
+         </h4>
+         <br>
+              <h5 class="text-center"><img src="/storage/upgrade/0.95912400 1619720439diamond.png" width="100"></h5>
+              <br>
+ 
+                              
+         <p style="line-height:0.6em; border-bottom: 1px solid #4caf50;" class="card p-2">24/7 Customer Service</p>
+                
+                              
+         <p style="line-height:0.6em; border-bottom: 1px solid #4caf50;" class="card p-2">Professional Chart</p>
+                
+                              
+         <p style="line-height:0.6em; border-bottom: 1px solid #4caf50;" class="card p-2">Trading Alert</p>
+                
+                              
+         <p style="line-height:0.6em; border-bottom: 1px solid #4caf50;" class="card p-2">Trading Central(Basic)</p>
+                
+                              
+         <p style="line-height:0.6em; border-bottom: 1px solid #4caf50;" class="card p-2">A Personal Coach</p>
+                
+                              
+         <p style="line-height:0.6em; border-bottom: 1px solid #4caf50;" class="card p-2">4,000 USD Bonus</p>
+                
+                              
+         <p style="line-height:0.6em; border-bottom: 1px solid #4caf50;" class="card p-2">SMS &amp; Email Alert</p>
+                
+                              
+         <p style="line-height:0.6em; border-bottom: 1px solid #4caf50;" class="card p-2">Live Trading With Expert</p>
+                
+                              
+         <p style="line-height:0.6em; border-bottom: 1px solid #4caf50;" class="card p-2">Financial Expert Session</p>
+                
+                              
+         <p style="line-height:0.6em; border-bottom: 1px solid #4caf50;" class="card p-2">Research Website</p>
+                
+                              
+         <p style="line-height:0.6em; border-bottom: 1px solid #4caf50;" class="card p-2">Customize Platform</p>
+                
+                              
+         <p style="line-height:0.6em; border-bottom: 1px solid #4caf50;" class="card p-2">High Trading Limit/Exposure</p>
+                
+                              
+         <p style="line-height:0.6em; border-bottom: 1px solid #4caf50;" class="card p-2">Advance Software Configuration</p>
+                
+                              
+         <p style="line-height:0.6em; border-bottom: 1px solid #4caf50;" class="card p-2">Free Withdrawal</p>
+                
+                
+ 
+    <div class="text-center">
+            <a href="/upgrade/platinum" class="btn btn-success btn-block text-white bolder btn-sm roundButton" ><strong>Upgrage</strong></a>
+
+ </div>
+     </div>
+ </div>
+     </div>
+       
+ 
+ 
+         
+ 
+         </div>
+ <div class="float-right">
+     <div>
+     </div>
+ 
+ </div>
+ 
+ 
+ 
+ 
+
+ <div class="text-right">
+     <div>
+     </div>
+ 
+ </div>
+ </div>
+ </div>
+ </div>

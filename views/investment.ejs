@@ -1,0 +1,161 @@
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper ">
+
+  
+    <!-- top tiles -->
+    <div class="container-fluid" style="background: #04396D;">
+        <div class="row tile_count">
+          <div class="col-md-2 col-sm-4 col-6 tile_stats_count p-2">
+          <div class="card p-3 bg-navy">
+            <span class="count_top"><i class="fa fa-money"></i> Balance</span>
+            <div class="count" style=""><%=req.user.currency%> <%= req.user.balance.toFixed(2) %></div>
+            <span class="count_bottom"><i class="text-success">Available </i> Balance</span>
+            </div>
+          </div>
+          <div class="col-md-2 col-sm-4 col-6 tile_stats_count p-2">
+           <div class="card p-3 bg-secondary">
+            <span class="count_top"><i class="fa fa-clock-o"></i> Invested</span>
+            <div class="count" style=""><%=req.user.currency%> <%= req.user.invested.toFixed(2) %></div>
+            <span class="count_bottom"><i class="text-warning"><i class="fa fa-sort-asc"></i>Trade</i> Ongoing</span>
+            </div>
+          </div>
+          <div class="col-md-2 col-sm-4 col-6 tile_stats_count p-2">
+           <div class="card p-3 bg-navy">
+            <span class="count_top"><i class="fa fa-shield"></i> Account Type</span>
+            <div class="count text-success bolder" style="font-weight: bolder;"> <%= req.user.account_type %> </div>
+            <span class="count_bottom"><i class="text-success"><i class="fa fa-sort-asc"></i>Trade </i> Account Type</span>
+            </div>
+          </div>
+                      <div class="col-md-2 col-sm-4 col-6 tile_stats_count p-2">
+           <div class="card p-3 bg-navy">
+            <span class="count_top"><i class="fa fa-arrow-down"></i> Total Withdrawals</span>
+            <div class="count" style=""><%=req.user.currency%> <%= req.user.total_withdraw.toFixed(2) %></div>
+            <span class="count_bottom"><i class="text-success"><i class="fa fa-sort-asc"></i>Withdrawals </i> </span>
+            </div>
+          </div>
+          <div class="col-md-2 col-sm-4 col-6 tile_stats_count p-2" style="border-right: 0;">
+           <div class="card p-3 bg-dark">
+            <span class="count_top"><i class="fa fa-credit-card"></i> Total Profit</span>
+            <div class="count" style=""><%=req.user.currency%> <%= req.user.total_profit.toFixed(2) %></div>
+            <span class="count_bottom"><i class="text-success"><i class="fa fa-sort-asc"></i>32% </i> From last Week</span>
+            </div>
+          </div>
+        </div>
+        </div>
+ 
+           <!-- /top tiles -->
+ 
+              <div class="container-fluid" >
+ 
+      <div style="position: fixed; margin-left: 20px; background: #fff; border-radius: 15px; padding: 10px;  bottom: 10%; z-index: 1000;"><a href="https://api.whatsapp.com/send/?phone=12144821285‬&amp;text&amp;app_absent=0"><i class="fa fa-whatsapp text-success whatsapp"></i></a></div>
+                <div style="position: fixed; right: 0; bottom: 10%; font-size: 30px; z-index: 1000;"></div>
+ 
+ <div wire:id="g3Vb2YVBXARS8AiUs4BD" wire:initial-data="{&quot;fingerprint&quot;:{&quot;id&quot;:&quot;g3Vb2YVBXARS8AiUs4BD&quot;,&quot;name&quot;:&quot;user-add-investment&quot;,&quot;locale&quot;:&quot;en&quot;},&quot;effects&quot;:{&quot;listeners&quot;:[],&quot;path&quot;:&quot;https:\/\/acc.pureforexcrypto.com\/investment&quot;},&quot;serverMemo&quot;:{&quot;children&quot;:[],&quot;errors&quot;:[],&quot;htmlHash&quot;:&quot;863c4587&quot;,&quot;data&quot;:{&quot;amount&quot;:null,&quot;duration&quot;:null,&quot;search&quot;:null,&quot;adinv&quot;:false,&quot;page&quot;:1},&quot;dataMeta&quot;:[],&quot;checksum&quot;:&quot;df535b5182be7d0011a5e11dd8723755deaf08f10cebd22cdbc1a2532f0294e7&quot;}}">
+ <div class="col-12 p-2 d-flex justify-content-between align-items-center p_header">
+ 
+     <h5><img src="https://cdn-icons-png.flaticon.com/128/3310/3310653.png" width="60" height="50" ><b class="text-success"> Investment</b>
+ </h5>
+ <div>
+ <a class="btn btn-info btn-sm roundButton" href="/addInvestment"  >Add Investment</a>
+ 
+  </div>
+ 
+ </div>
+  
+  <div class="">
+  
+ 
+ 
+ 
+ 
+ <div class="col-12" >
+         </div>
+         <div class="col-12" >
+         </div>
+ 
+         <div class="col-12" >
+ 
+         </div>
+ 
+ 
+         <div class="table-responsive">
+ 
+         <div class="col-lg-3 offset-lg-9 p-4">
+             <input type="text" wire:model="search" class="form-control">
+         </div>
+         <table class="table  table-striped">
+  
+        <thead class="bg-dark">
+            <th>S/N</th>
+            
+            <th> Invested Amount  (R)</th>
+        
+            <th> Expiresd Date</th>
+            <th> Status</th>
+            <th> Date  </th>
+        
+        
+    
+        </thead>
+        <tbody>
+            <% req.user.investments.map((inv, index) => {%>
+                <tr>
+                    <td><%= index + 1 %></td>
+                    <td><%= inv.amount %></td>
+                    <td><%= new Date(inv.expiry).toDateString() %></td>
+                    <td><%= inv.status %></td>
+                    <td><%= new Date(inv.date).toDateString() %></td>
+                </tr>
+            <%})%>
+        </tbody>
+         </table>
+         <div>
+             <div>
+     </div>
+ 
+         </div>
+         </div>
+         </div>
+ </div>
+  <!-- Livewire Scripts -->
+ 
+ <script src="/vendor/livewire/livewire.js?id=936e5d0fb0b76b631ba7" data-turbo-eval="false" data-turbolinks-eval="false"></script>
+ <script data-turbo-eval="false" data-turbolinks-eval="false">
+     if (window.livewire) {
+         console.warn('Livewire: It looks like Livewire\'s @livewireScripts JavaScript assets have already been loaded. Make sure you aren\'t loading them twice.')
+     }
+ 
+     window.livewire = new Livewire();
+     window.livewire.devTools(true);
+     window.Livewire = window.livewire;
+     window.livewire_app_url = '';
+     window.livewire_token = 'xZ8sHpwBLscRbA3A9GyYPlP0c9mXXFkl3Wnp2Chi';
+ 
+     /* Make sure Livewire loads first. */
+     if (window.Alpine) {
+         /* Defer showing the warning so it doesn't get buried under downstream errors. */
+         document.addEventListener("DOMContentLoaded", function () {
+             setTimeout(function() {
+                 console.warn("Livewire: It looks like AlpineJS has already been loaded. Make sure Livewire\'s scripts are loaded before Alpine.\n\n Reference docs for more info: http://laravel-livewire.com/docs/alpine-js")
+             })
+         });
+     }
+ 
+     /* Make Alpine wait until Livewire is finished rendering to do its thing. */
+     window.deferLoadingAlpine = function (callback) {
+         window.addEventListener('livewire:load', function () {
+             callback();
+         });
+     };
+ 
+     document.addEventListener("DOMContentLoaded", function () {
+         window.livewire.start();
+     });
+ </script>
+ 
+ 
+          
+ </div>
+ 
+   </div>
+   <!-- /.content-wrapper -->
