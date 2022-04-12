@@ -9,10 +9,8 @@ module.exports = function(passport) {
     new LocalStrategy({ usernameField: 'email' }, (username, password, done) => {
       // Match user
       User.findOne({
-        username
+        email: username
       }).then(user => {
-        console.log(user);
-        console.log(password);
         if (!user) {
           return done(null, false, { message: 'invalid email or password' });
         }
