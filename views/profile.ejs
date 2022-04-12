@@ -75,7 +75,7 @@
            </div>
            <div class="col-lg-8   ">
                <div class="bg-white p-2">
-         <h3 class="text-success"><b>Godwin Nicholas</b></h3>
+         <h3 class="text-success"><b><%= req.user.fullname %></b></h3>
          <div class="d-flex justify-content-between">
            <p  class="text-secondary"><i class="fa fa-user"></i> Account ID:</p>
            <p class="bg-primary text-secondary small p-1 " style="height: 20px;">X<%= String(req.user.id).slice(3,11) %></p>

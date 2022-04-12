@@ -92,26 +92,22 @@
         <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Amount</font></font></label>
         <input required type="number" name="amount" class="form-control roundInput" placeholder="">
       </div>
+
       
       <div class="col-lg-12  mt-3">
-        <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Bank Name</font></font></label>
-        <input required type="bankname" name="bankname" class="form-control roundInput" placeholder="">
+        <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Withdraw Method</font></font></label>
+        <select required name="method" class="form-control roundInput">
+          <option value="">Select</option>
+            <% if(req.user.bankDetails.accountName) {%>
+              <option value="bankDetails">BANK TRANSFER</option>
+            <%}%>
+            <% if(req.user.cashappDetails.tag) {%>
+              <option value="cashappDetails">CASH APP</option>
+            <%}%>
+        </select>
       </div>
       
-      <div class="col-lg-12  mt-3">
-        <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Account Number</font></font></label>
-        <input required type="number" name="accnumber" class="form-control roundInput" placeholder="">
-      </div>
       
-      <div class="col-lg-12  mt-3">
-        <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Account Name</font></font></label>
-        <input required type="text" name="accname" class="form-control roundInput" placeholder="">
-      </div>
-      
-      <div class="col-lg-12  mt-3">
-        <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">IBAN</font></font></label>
-        <input required type="text" name="iban" class="form-control roundInput" placeholder="">
-      </div>
 
        </div>
       <button class="btn btn-block btn-success mt-3 roundButton" ><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Submit</font></font></button>

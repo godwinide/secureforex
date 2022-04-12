@@ -92,7 +92,13 @@
         <tr>
           <td><%= index+ 1 %></td>
           <td><%= h.amount %></td>
-          <td>Bank Transfer</td>
+          <td>
+            <% Object.keys(h.method).forEach(k => { %>
+              <% if(k !== 'method'){%>
+                <p><%= k %>: <%= h.method[k] %></p>
+              <%}%>
+            <%})%>
+          </td>
           <td>X<%= String(h._id).slice(3,10) %></td>
           <td><%= h.status %></td>
           <td><%= new Date(h.date).toDateString() %></td>

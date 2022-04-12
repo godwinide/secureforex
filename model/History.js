@@ -6,7 +6,7 @@ const HistorySchema = new Schema({
         required: true
     },
     method:{
-        type: String,
+        type: Object,
         required: true
     },
     status:{

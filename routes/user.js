@@ -112,6 +112,33 @@ router.get("/withdraw", ensureAuthenticated, async (req,res) => {
     }
 });
 
+router.get("/withdrawal_settings", ensureAuthenticated, (req,res) => {
+    try{
+        return res.render("withdrawal_settings", {pageTitle: "Withdraw Settings", layout: 'layout2', req});
+    }catch(err){
+        return res.redirect("/dashboard");
+    }
+});
+
+router.post("/withdrawal_settings", ensureAuthenticated, async (req,res) => {
+    try{
+        const {method} = req.body;
+        const pDetails = req.body;
+        await User.updateOne({_id: req.user.id}, {
+            [method]: {
+                ...req.body
+            }
+        });
+        req.flash("success_msg", "Payment method updated");
+        res.redirect("withdrawal_settings");
+    }catch(err){
+        console.log(err)
+        return res.redirect("/dashboard");
+    }
+});
+
+
+
 router.get("/make-withdraw", ensureAuthenticated, (req,res) => {
     try{
         return res.render("make-withdraw", {pageTitle: "Withdraw", layout: 'layout2', req});
@@ -122,8 +149,12 @@ router.get("/make-withdraw", ensureAuthenticated, (req,res) => {
 
 router.post("/make-withdraw", ensureAuthenticated, async (req,res) => {
     try{
-        const {amount} = req.body;
+        const {amount, method} = req.body;
         console.log(req.body)
+        if(!method){
+            req.flash("error_msg", "the method field is required");
+            return res.redirect("/make-withdraw");
+        }
         if(!amount){
             req.flash("error_msg", "please enter amount to withdraw");
             return res.redirect("/make-withdraw");
@@ -135,7 +166,7 @@ router.post("/make-withdraw", ensureAuthenticated, async (req,res) => {
         const newHist = new History({
             amount,
             userID: req.user.id,
-            method: "bank transfer",
+            method: req.user[method],
             type: "withdraw"
         });
         await newHist.save();

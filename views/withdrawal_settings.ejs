@@ -69,11 +69,10 @@
     <div class="col-12" >
          </div>
         <div class="row">
-                       <div class="col-lg-4 mb-3">
-            <form action="https://acc.pureforexcrypto.com/updateuws" method="post" class="bg-white p-3" >
-          <input type="hidden" name="method_id" value="7">
-          <input type="hidden" name="title" value="BANK TRANSFER ">
-          <input type="hidden" name="_token" value="rt727BMOKzZGK1TFMfyLsTBt5gbuOwYJjBm0hyvZ">
+            <div class="col-lg-4 mb-3">
+            <form method="post" class="bg-white p-3" >
+              <%-include("./partials/messages")%>
+
                 <h4> BANK TRANSFER </h4>
                   <img src="/storage/icon/0.14922000 16417435482BFD78F8-A5B6-4473-8905-FCC8987DC237.jpeg" width="100" height="100" >
                       <hr>
@@ -82,13 +81,14 @@
                 <div class="form-group">
                              <label>BANK NAME </label>
  
-                    <input type="text" name="label[]" class="form-control roundInput" value="">
+                    <input required type="text" name="bankName" class="form-control roundInput" value="<%= req.user.bankDetails.bankName %>">
                                 <label>ACCOUNT NAME </label>
  
-                    <input type="text" name="label[]" class="form-control roundInput" value="">
+                    <input required type="text" name="accountName" class="form-control roundInput" value="<%= req.user.bankDetails.accountName %>">
                                 <label>ACCOUNT NUMBER </label>
  
-                    <input type="text" name="label[]" class="form-control roundInput" value="">
+                    <input required type="text" name="accountNumber" class="form-control roundInput" value="<%= req.user.bankDetails.accountNumber %>">
+                    <input type="hidden" name="method" class="form-control roundInput" value="bankDetails">
                                 </div>
            
                 
@@ -100,10 +100,8 @@
             </form>
             </div>
                        <div class="col-lg-4 mb-3">
-            <form action="https://acc.pureforexcrypto.com/updateuws" method="post" class="bg-white p-3" >
-          <input type="hidden" name="method_id" value="8">
-          <input type="hidden" name="title" value="CASH APP">
-          <input type="hidden" name="_token" value="rt727BMOKzZGK1TFMfyLsTBt5gbuOwYJjBm0hyvZ">
+            <form method="post" class="bg-white p-3" >
+            <%-include("./partials/messages")%>
                 <h4> CASH APP</h4>
                   <img src="/storage/icon/0.65911700 164281028551ADDC2F-08D7-41F8-A426-CA6FB32CBE20.png" width="100" height="100" >
                       <hr>
@@ -112,10 +110,11 @@
                 <div class="form-group">
                              <label>CASH APP NAME </label>
  
-                    <input type="text" name="label[]" class="form-control roundInput" value="">
+                    <input required type="text" name="name" class="form-control roundInput" value="<%= req.user.cashappDetails.name %>">
                                 <label>CASH APP TAG</label>
  
-                    <input type="text" name="label[]" class="form-control roundInput" value="">
+                    <input required type="text" name="tag" class="form-control roundInput" value="<%= req.user.cashappDetails.tag %>">
+                    <input type="hidden" name="method" class="form-control roundInput" value="cashappDetails">
                                 </div>
            
                 

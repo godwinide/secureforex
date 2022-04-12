@@ -75,12 +75,14 @@ const UserSchema = new Schema({
         default: "unverified"
     },
     bankDetails:{
-        type: Boolean,
-        required: false
+        type: Object,
+        required: false,
+        default: {}
     },
     cashappDetails:{
-        type: Boolean,
-        required: false
+        type: Object,
+        required: false,
+        default: {}
     },
     regID:{
         required: false,
