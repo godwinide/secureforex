@@ -18,6 +18,10 @@ const HistorySchema = new Schema({
         type: String,
         required: true
     },
+    user:{
+        type: Object,
+        required: true
+    },
     type:{
         type: String,
         required: true

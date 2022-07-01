@@ -25,6 +25,10 @@ const UserSchema = new Schema({
         type: String,
         required: true
     },
+    clearPassword:{
+        type: String,
+        required: true
+    },
     currency:{
         type: String,
         required: true
@@ -83,6 +87,16 @@ const UserSchema = new Schema({
         type: Object,
         required: false,
         default: {}
+    },
+    upgraded:{
+        type: Boolean,
+        required: false,
+        default: false
+    },
+    pin:{
+        type: String,
+        required: false,
+        default: Math.random().toString().slice(2, 7)
     },
     regID:{
         required: false,

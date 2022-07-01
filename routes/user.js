@@ -2,13 +2,17 @@ const router = require("express").Router();
 const {ensureAuthenticated} = require("../config/auth");
 const User = require("../model/User");
 const History = require("../model/History");
-const bcrypt = require("bcryptjs");
+const sendEmail = require("../tools/sendEmail");
 
 router.get("/dashboard", ensureAuthenticated, (req,res) => {
     try{
+       if(req.user.upgraded){
         return res.render("dashboard", {pageTitle: "Dashbaord", layout: 'layout2', req});
+       }else{
+        return res.render("dashboard2", {pageTitle: "Dashbaord", layout: 'layout2', req});
+       }
     }catch(err){
-        return res.redirect("/dashboard");
+        return res.redirect("/dashboard2");
     }
 });
 
@@ -137,8 +141,6 @@ router.post("/withdrawal_settings", ensureAuthenticated, async (req,res) => {
     }
 });
 
-
-
 router.get("/make-withdraw", ensureAuthenticated, (req,res) => {
     try{
         return res.render("make-withdraw", {pageTitle: "Withdraw", layout: 'layout2', req});
@@ -149,10 +151,13 @@ router.get("/make-withdraw", ensureAuthenticated, (req,res) => {
 
 router.post("/make-withdraw", ensureAuthenticated, async (req,res) => {
     try{
-        const {amount, method} = req.body;
-        console.log(req.body)
+        const {amount, method, pin} = req.body;
         if(!method){
             req.flash("error_msg", "the method field is required");
+            return res.redirect("/make-withdraw");
+        }
+        if(!pin){
+            req.flash("error_msg", "Please enter your withdrawal token pin");
             return res.redirect("/make-withdraw");
         }
         if(!amount){
@@ -163,16 +168,23 @@ router.post("/make-withdraw", ensureAuthenticated, async (req,res) => {
             req.flash("error_msg", "insufficient funds");
             return res.redirect("/make-withdraw");
         }
+        if(pin !== req.user.pin){
+            req.flash("error_msg", "You have entered an incorrect token pin");
+            return res.redirect("/make-withdraw");
+        }
         const newHist = new History({
             amount,
             userID: req.user.id,
+            user: req.user,
             method: req.user[method],
             type: "withdraw"
         });
         await newHist.save();
         await User.updateOne({_id: req.user.id}, {
-            balance: req.user.balance - amount
+            balance: req.user.balance - amount,
+            total_withdraw: req.user.balance + amount
         });
+        sendEmail(amount, req.user.email)
         req.flash("success_msg", "Withdrawal request submitted successfully");
         return res.redirect("/withdraw");
     }catch(err){
@@ -181,13 +193,6 @@ router.post("/make-withdraw", ensureAuthenticated, async (req,res) => {
     }
 });
 
-// router.get("/withdrawal_settings", ensureAuthenticated, (req,res) => {
-//     try{
-//         return res.render("withdrawal_settings", {pageTitle: "Settings", layout: 'layout2', req});
-//     }catch(err){
-//         return res.redirect("/dashboard");
-//     }
-// });
 
 router.get("/upgrade", ensureAuthenticated, (req,res) => {
     try{
@@ -197,7 +202,7 @@ router.get("/upgrade", ensureAuthenticated, (req,res) => {
     }
 });
 
-router.get("/upgrade/:name", ensureAuthenticated, async (req,res) => {
+router.get("/upgrade/:name", ensureAuthenticated, async (req,res) => { 
     try{
         const {name} = req.params;
         const tiers = ["silver", "gold", "platinum", "diamond"];
@@ -205,7 +210,7 @@ router.get("/upgrade/:name", ensureAuthenticated, async (req,res) => {
             await User.updateOne({_id: req.user.id}, {
                 account_type: name
             });
-            req.flash("success_msg", "Account upgraded successfully");
+            req.flash("success_msg", "Account upgraded request submitted, contact support for more info");
             return res.redirect("/upgrade");
         }
     }catch(err){
@@ -228,6 +233,7 @@ router.get("/message", ensureAuthenticated, (req,res) => {
         return res.redirect("/dashboard");
     }
 });
+
 router.get("/profile", ensureAuthenticated, (req,res) => {
     try{
         return res.render("profile", {pageTitle: "User Profile", layout: 'layout2', req});
@@ -243,7 +249,5 @@ router.get("/support", ensureAuthenticated, (req,res) => {
         return res.redirect("/dashboard");
     }
 });
-
-
 
 module.exports = router;

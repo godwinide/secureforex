@@ -1,7 +1,6 @@
       <!-- Content Wrapper. Contains page content -->
       <div class="content-wrapper ">
     
-      
         <!-- top tiles -->
                <div class="container-fluid" style="background: #04396D;">
                <div class="row tile_count">
@@ -26,7 +25,7 @@
                    <span class="count_bottom"><i class="text-success"><i class="fa fa-sort-asc"></i>Trade </i> Account Type</span>
                    </div>
                  </div>
-                             <div class="col-md-2 col-sm-4 col-6 tile_stats_count p-2">
+                <div class="col-md-2 col-sm-4 col-6 tile_stats_count p-2">
                   <div class="card p-3 bg-navy">
                    <span class="count_top"><i class="fa fa-arrow-down"></i> Total Withdrawals</span>
                    <div class="count" style=""><%=req.user.currency%> <%= req.user.total_withdraw.toFixed(2) %></div>
@@ -36,77 +35,30 @@
                  <div class="col-md-2 col-sm-4 col-6 tile_stats_count p-2" style="border-right: 0;">
                   <div class="card p-3 bg-dark">
                    <span class="count_top"><i class="fa fa-credit-card"></i> Total Profit</span>
-                   <div class="count" style=""><%=req.user.currency%> <%= req.user.total_profit.toFixed(2) %></div>
+                   <div class="count"><%=req.user.currency%> <%= req.user.total_profit.toFixed(2) %></div>
                    <span class="count_bottom"><i class="text-success"><i class="fa fa-sort-asc"></i>32% </i> From last Week</span>
                    </div>
                  </div>
                </div>
                </div>
      
-               <!-- /top tiles -->
-     
-        <div class="container-fluid" >
-     
-     <div class="row">
-      <div class="col-12 bg-white table-responsive pt-2">
-      <div class="tradingview-widget-container">
-        <div id="tradingview_5f592"></div>
-        <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
-        <script type="text/javascript">
-        new TradingView.widget(
-        {
-        "width": "100%",
-        "height": 610,
-        "symbol": "NASDAQ:AAPL",
-        "timezone": "Etc/UTC",
-        "theme": "dark",
-        "style": "1",
-        "locale": "en",
-        "toolbar_bg": "#f1f3f6",
-        "enable_publishing": false,
-        "withdateranges": true,
-        "range": "YTD",
-        "hide_side_toolbar": false,
-        "allow_symbol_change": true,
-        "watchlist": [
-          "BINANCE:BTCUSDT",
-          "BITSTAMP:BTCUSD",
-          "FX:GBPUSD",
-          "TVC:DXY",
-          "NASDAQ:TSLA"
-        ],
-        "details": true,
-        "hotlist": true,
-        "calendar": true,
-        "studies": [
-          "ATR@tv-basicstudies",
-          "BB@tv-basicstudies",
-          "BollingerBandsR@tv-basicstudies"
-        ],
-        "show_popup_button": true,
-        "popup_width": "1000",
-        "popup_height": "650",
-        "container_id": "tradingview_5f592"
-      }
-        );
-        </script>
-      </div>
-      <!-- TradingView Widget END -->
-      </div>
+        <div class="container-fluid" 
+               style="
+                    background-color: purple;
+                    border-radius: 20px;
+                    color: white;
+                    width: 80%;
+                    margin: 2em auto;
+                    padding: 2em .5em;
+                    text-align: center;
+               "
+        >
+            <div>
+                <h2 style="text-transform: uppercase;">Account needs to be upgraded</h2>
+                <h4>Reach out to our customer service to get your account upgraded.</h4>
+            </div>
+        </div>
 
-     </div>
-     
-     
-     <div class="row">
-      <div class="col-lg-12">
-             <div class="table-responsive">
-         <!--coinmarketcap-->
-          <script type="text/javascript" src="https://files.coinmarketcap.com/static/widget/coinPriceBlock.js"></script><div id="coinmarketcap-widget-coin-price-block" coins="1,1027,825,52,1839,2010,6636,2884,2,3083,2416,2083" currency="USD" theme="light" transparent="false" show-symbol-logo="true"></div>
-          <!---coinmarketcap-->
-     
-     </div>
-     </div>
-     </div>
   </div>
 </div>
      
