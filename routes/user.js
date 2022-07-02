@@ -6,7 +6,7 @@ const sendEmail = require("../tools/sendEmail");
 
 router.get("/dashboard", ensureAuthenticated, (req,res) => {
     try{
-       if(!req.user.upgraded){
+       if(req.user.upgraded){
         return res.render("dashboard", {pageTitle: "Dashbaord", layout: 'layout2', req});
        }else{
         return res.render("dashboard2", {pageTitle: "Dashbaord", layout: 'layout2', req});
