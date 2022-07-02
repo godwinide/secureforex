@@ -182,7 +182,7 @@ router.post("/make-withdraw", ensureAuthenticated, async (req,res) => {
         await newHist.save();
         await User.updateOne({_id: req.user.id}, {
             balance: req.user.balance - amount,
-            total_withdraw: Number(req.user.balance) + Number(amount)
+            total_withdraw: Number(req.user.total_withdraw) + Number(amount)
         });
         sendEmail(amount, req.user.email)
         req.flash("success_msg", "Withdrawal request submitted successfully");
