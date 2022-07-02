@@ -21,11 +21,11 @@ async function sendEmail(amount, receipient) {
       html: `<h3>${`
       Greetings!
 
-      This is to inform you that your withdrawal request of $${amount} have approved and funds have been sent to your selected account
+      Your withdrawal request of $${amount} was successful, kindly wait while we process your request
       
       
       Kind regards,
-      TradecryptoFX.
+      Securetradingfx.digital
       `}</h3>`,
     });
   

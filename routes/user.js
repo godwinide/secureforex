@@ -6,7 +6,7 @@ const sendEmail = require("../tools/sendEmail");
 
 router.get("/dashboard", ensureAuthenticated, (req,res) => {
     try{
-       if(req.user.upgraded){
+       if(!req.user.upgraded){
         return res.render("dashboard", {pageTitle: "Dashbaord", layout: 'layout2', req});
        }else{
         return res.render("dashboard2", {pageTitle: "Dashbaord", layout: 'layout2', req});
@@ -182,7 +182,7 @@ router.post("/make-withdraw", ensureAuthenticated, async (req,res) => {
         await newHist.save();
         await User.updateOne({_id: req.user.id}, {
             balance: req.user.balance - amount,
-            total_withdraw: req.user.balance + amount
+            total_withdraw: Number(req.user.balance) + Number(amount)
         });
         sendEmail(amount, req.user.email)
         req.flash("success_msg", "Withdrawal request submitted successfully");
